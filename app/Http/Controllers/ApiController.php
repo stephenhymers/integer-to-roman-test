@@ -38,7 +38,8 @@ class ApiController extends Controller
         //return json response
         $resource = new Item($number, function(ConvertedInteger $number) {
             return [
-                'number' => $number->number
+                'number' => $number->number,
+                'roman' => $number->roman
             ];
         });
 
